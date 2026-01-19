@@ -1,37 +1,42 @@
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight, Calendar, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const CTASection = () => {
   return (
-    <section className="section-padding bg-primary">
+    <section className="section-padding bg-foreground">
       <div className="section-container">
-        <AnimatedSection className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary-foreground/10 mb-6">
-            <Shield className="w-8 h-8 text-primary-foreground" />
-          </div>
-          
-          <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
-            Start Reducing Human Cyber Risk Today
+        <AnimatedSection className="max-w-2xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-background mb-4">
+            Protect Your Company Before a Fraud Happens
           </h2>
-          <p className="text-lg text-primary-foreground/80 mb-8 max-w-xl mx-auto">
-            Join hundreds of organizations protecting their workforce with simple, effective security awareness.
+          <p className="text-lg text-background/70 mb-8 max-w-xl mx-auto">
+            Start building a security-aware workforce today. No software, no hassle.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button 
-              size="xl" 
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-lg"
+              size="lg" 
+              className="w-full sm:w-auto bg-background text-foreground hover:bg-background/90"
             >
-              Launch Awareness Program
-              <ArrowRight className="w-5 h-5" />
+              <Calendar className="w-4 h-4 mr-2" />
+              Schedule Demo
             </Button>
             <Button 
               variant="outline" 
-              size="xl"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:border-primary-foreground"
+              size="lg"
+              className="w-full sm:w-auto border-background/30 text-background hover:bg-background/10 hover:border-background"
             >
-              Schedule a Demo
+              <ArrowRight className="w-4 h-4 mr-2" />
+              Get Pricing
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="w-full sm:w-auto border-background/30 text-background hover:bg-background/10 hover:border-background"
+            >
+              <MessageCircle className="w-4 h-4 mr-2" />
+              WhatsApp Us
             </Button>
           </div>
         </AnimatedSection>
