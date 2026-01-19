@@ -5,6 +5,17 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Dashboard from "./pages/Dashboard";
+import Companies from "./pages/Companies";
+import Employees from "./pages/Employees";
+import Content from "./pages/Content";
+import EmailDelivery from "./pages/EmailDelivery";
+import Reports from "./pages/Reports";
+import Phishing from "./pages/Phishing";
+import Billing from "./pages/Billing";
+import AccessControl from "./pages/AccessControl";
+import Settings from "./pages/Settings";
+import Security from "./pages/Security";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +27,17 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/companies" element={<Companies />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/content" element={<Content />} />
+          <Route path="/email-delivery" element={<EmailDelivery />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/phishing" element={<Phishing />} />
+          <Route path="/billing" element={<Billing />} />
+          <Route path="/access" element={<AccessControl />} />
+          <Route path="/settings" element={<Settings />} />
+          <Route path="/security" element={<Security />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
